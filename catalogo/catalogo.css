@@ -1,0 +1,25 @@
+body {
+  background-color: #f8f9fa;
+}
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.price {
+
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #198754;
+}
+
+.marca {
+  font-style: italic;
+  color: #6c757d;
+}
