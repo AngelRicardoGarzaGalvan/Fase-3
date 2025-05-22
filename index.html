@@ -10,15 +10,20 @@
 </head>
 <body>
 
+  <div class="dropdown user-dropdown">
+    <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="./img/usuario.jpg" alt="Usuario" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+      <span>Usuario</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><a class="dropdown-item text-danger" href="./log_in/iniciar_sesion.php">Cerrar sesión</a></li>
+    </ul>
+  </div>
+
   <!-- Banner superior -->
   <section class="banner">
-    <div class="user-info">
-      <img src="./img/usuario.jpg" alt="Usuario" class="rounded-circle" />
-      <span>Usuario</span>
-    </div>
-
-    <div class="banner-content">
-      <h6>Adentrate en nuestro sitio web</h6>
+    <div class="banner-content text-center">
+      <h6>Adéntrate en nuestro sitio web</h6>
       <h1>¡Encuentra todo lo que buscas y necesitas!</h1>
       <p>Coches diseñados para ti</p>
       <a href="acerca/acerca.html" class="btn-banner">Conoce más</a>
@@ -26,10 +31,9 @@
   </section>
 
   <div class="container" id="secciones">
-
     <!-- Título -->
     <br />
-    <p>¡Hola, Usuario!</p>
+    <p>¡Bienvenido!</p>
     <p>Dirígete a la sección que más te interese</p>
 
     <!-- Secciones -->
@@ -57,7 +61,7 @@
           <img src="./img/historialp.jpg" alt="Historial de pedidos" class="img-fluid img-historial" />
           <h5 class="mt-3">Historial de pedidos</h5>
           <p>Administra la información sobre tus pedidos recientes.</p>
-          <a href="#" class="btn-link">Ir →</a>
+          <a href="pedidos/historialpedidos.php" class="btn-link">Ir →</a>
         </div>
       </div>
     </div>
