@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pedir_auto'])) {
                VALUES ($idUsuario, $idAuto, $idPlan, '$telefono', '$correo', '$opinion', '$fecha')";
 
     if ($conexion->query($insert)) {
-        header("Location: historialpedidos.php");
+        header("Location: ../pedidos/historialpedidos.php");
         exit;
     } else {
         echo "<div class='alert alert-danger'>Error al guardar pedido: " . $conexion->error . "</div>";
