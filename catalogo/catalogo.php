@@ -11,7 +11,27 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-light shadow-sm px-4">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="../index.html">Inicio</a>
+      <a class="navbar-brand fw-bold" href="..//index.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary text-white px-3 me-2 active" aria-current="page" href="../acerca/acerca.html">Acerca de Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary px-3 me-2" href="catalogo.php">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary px-3" href="../acerca/contactanos.html">Contáctanos</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <i class="bi bi-person-circle fs-4 me-2"></i>
+          <span>Usuario</span>
+        </div>
+      </div>
     </div>
   </nav>
 
