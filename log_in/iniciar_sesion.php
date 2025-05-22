@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Redirigir según rol
             if ($usuario['idRol'] == 1) {
-                header("Location: .//admin.html");
+                header("Location: ../admin.html");
             } else {
                 header("Location: ../index.html");
             }
