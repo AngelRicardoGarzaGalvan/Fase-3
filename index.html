@@ -6,6 +6,7 @@
   <title>Página Principal - ABJA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -67,6 +68,7 @@
       </div>
     </div>
   </div>
+  <br><br>
   <!--Cuadros de logos -->
   <div class="car-container">
     <div class="car-box" onclick="toggleInfo('toyota')">
@@ -120,17 +122,44 @@
     </div>
 
   </div>
-  <footer>
-    <div class="footer-container">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="acerca/acerca.html">Acerca de</a></li>
-            <li><a href="footer/Trabaja-AJAP.html">Trabaja en AJAP</a></li>
-            <li><a href="acerca/contactanos.html">Contacto</a></li>
-            <li><a href="footer/terminos.html">Terminos y condiciones</a></li>
+<footer class="bg-dark text-white pt-4 mt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Logo e información -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">ABJA Autos</h5>
+        <p>Tu agencia de confianza para encontrar el auto ideal. Calidad, seguridad y estilo a tu alcance.</p>
+      </div>
+
+      <!-- Enlaces rápidos -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Navegación</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+          <li><a href="acerca/acerca.html" class="text-white text-decoration-none">Acerca de</a></li>
+          <li><a href="acerca/contactanos.html" class="text-white text-decoration-none">Contacto</a></li>
+          <li><a href="footer/terminos.html" class="text-white text-decoration-none">Términos y condiciones</a></li>
         </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Contacto</h5>
+        <p><i class="bi bi-telephone-fill"></i> +52 55 1234 5678</p>
+        <p><i class="bi bi-envelope-fill"></i> contacto@abjaautos.com</p>
+        <p><i class="bi bi-geo-alt-fill"></i> CDMX, México</p>
+      </div>
+
     </div>
+
+    <!-- Línea inferior -->
+    <div class="text-center border-top pt-3 mt-3">
+      <p class="mb-0">&copy; 2025 ABJA Autos. Todos los derechos reservados.</p>
+    </div>
+  </div>
 </footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="index.js"></script>
