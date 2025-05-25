@@ -169,11 +169,13 @@ h5 {
     border: 2px solid #ddd;
     border-radius: 10px;
     cursor: pointer;
+    overflow: hidden; /* Evita que la imagen sobresalga */
 }
 
 .car-box img {
-    max-width: 100px;
-    max-height: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
 }
 
 .car-info {
