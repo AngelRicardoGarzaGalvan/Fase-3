@@ -1,0 +1,7 @@
+    /* Tamaño de la gráfica de autos */
+    #ventasAutoChart {
+      max-width: 600px;
+      max-height: 400px;
+      margin: 0 auto;
+      display: block;
+    }
