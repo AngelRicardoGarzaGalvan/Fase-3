@@ -18,7 +18,6 @@ $resultado = $conexion->query($consulta);
 <body>
 <div class="container mt-5">
   <h2 class="mb-4">Gestión de Usuarios</h2>
-  <a href="crear_usuario.php" class="btn btn-primary mb-3">Agregar Usuario</a>
   <table class="table table-bordered">
     <thead>
       <tr>
