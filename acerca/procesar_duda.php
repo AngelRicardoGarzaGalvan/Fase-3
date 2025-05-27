@@ -40,10 +40,13 @@ $stmt->bind_param("issss", $idUsuario, $nombre, $telefono, $correo, $mensaje);
 
 // Ejecutar y verificar
 if ($stmt->execute()) {
-    echo "Gracias por enviar tu duda. Nos contactaremos contigo pronto.";
+    // Redireccionar a la pantalla de éxito
+    header("Location: duda_exito.php");
+    exit;
 } else {
     echo "Error: " . $stmt->error;
 }
+
 
 $stmt->close();
 $conn->close();
