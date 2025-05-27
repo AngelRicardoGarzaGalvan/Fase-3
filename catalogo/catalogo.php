@@ -18,10 +18,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link btn btn-primary text-white px-3 me-2 active" aria-current="page" href="../acerca/acerca.html">Acerca de Nosotros</a>
+            <a class="nav-link btn btn-outline-primary px-3" href="../acerca/acerca.html">Acerca de Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-outline-primary px-3 me-2" href="catalogo.php">Catálogo</a>
+            <a class="nav-link btn btn--primary px-3 me-2 active" aria-current="page" href="catalogo.php">Catálogo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn btn-outline-primary px-3" href="../acerca/contactanos.html">Contáctanos</a>
