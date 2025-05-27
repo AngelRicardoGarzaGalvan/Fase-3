@@ -6,7 +6,6 @@ $sql = "SELECT dudas.*, usuario.Nombre AS nombreUsuario
         FROM dudas 
         LEFT JOIN usuario ON dudas.idUsuario = usuario.idUsuario";
 
-
 $resultado = $conn->query($sql);
 ?>
 
@@ -40,17 +39,15 @@ $resultado = $conn->query($sql);
 <!-- CONTENIDO -->
 <div class="container mt-5">
   <h2 class="mb-4">Gestión de Dudas</h2>
-  <a href="crear_duda.php" class="btn btn-success mb-3">Agregar Duda</a>
 
   <table class="table table-bordered table-hover align-middle">
     <thead class="table-light">
       <tr>
-        <th>Nombre</th>
+        <th>Usuario</th>
+        <th>Asunto</th>
         <th>Teléfono</th>
         <th>Correo</th>
-        <th>Descripción</th>
-        <th>Usuario (registrado)</th>
-        <th>Fecha</th>
+        <th>Duda</th>
         <th>Acciones</th>
       </tr>
     </thead>
@@ -58,14 +55,19 @@ $resultado = $conn->query($sql);
       <?php if ($resultado && $resultado->num_rows > 0): ?>
         <?php while ($duda = $resultado->fetch_assoc()): ?>
         <tr>
+          <td><?= htmlspecialchars($duda['nombreUsuario'] ?? 'Invitado') ?></td>
           <td><?= htmlspecialchars($duda['Nombre']) ?></td>
           <td><?= htmlspecialchars($duda['Telefono']) ?></td>
           <td><?= htmlspecialchars($duda['Correo']) ?></td>
           <td><?= nl2br(htmlspecialchars($duda['Descripcion'])) ?></td>
-          <td><?= htmlspecialchars($duda['nombreUsuario'] ?? 'Invitado') ?></td>
           <td>
-            <a href="editar_duda.php?id=<?= $duda['idDuda'] ?>" class="btn btn-warning btn-sm">Editar</a>
-            <a href="eliminar_duda.php?id=<?= $duda['idDuda'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que quieres eliminar esta duda?');">Eliminar</a>
+            <div class="d-flex flex-column gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="btn btn-sm btn-secondary btn-leida">Leída</button>
+                <span class="estado-duda text-warning fw-semibold">🟠 Pendiente</span>
+              </div>
+              <a href="eliminar_duda.php?id=<?= $duda['idDuda'] ?>" class="btn btn-danger btn-sm mt-1" onclick="return confirm('¿Seguro que quieres eliminar esta duda?');">Eliminar</a>
+            </div>
           </td>
         </tr>
         <?php endwhile; ?>
@@ -80,5 +82,33 @@ $resultado = $conn->query($sql);
 
 <!-- Scripts de Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script para cambiar estado de "Leída" y mostrar "Resuelta" -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const botones = document.querySelectorAll('.btn-leida');
+
+    botones.forEach(boton => {
+      boton.addEventListener('click', function () {
+        const estado = this.closest('td').querySelector('.estado-duda');
+
+        if (this.classList.contains('btn-secondary')) {
+          this.classList.remove('btn-secondary');
+          this.classList.add('btn-success');
+          estado.textContent = '🟢 Resuelta';
+          estado.classList.remove('text-warning');
+          estado.classList.add('text-success');
+        } else {
+          this.classList.remove('btn-success');
+          this.classList.add('btn-secondary');
+          estado.textContent = '🟠 Pendiente';
+          estado.classList.remove('text-success');
+          estado.classList.add('text-warning');
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>

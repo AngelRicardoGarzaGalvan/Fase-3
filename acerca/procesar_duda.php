@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 // Obtener datos POST
-$nombre = trim($_POST['nombre'] ?? '');
+$nombre = trim($_POST['asunto'] ?? '');
 $telefono = trim($_POST['telefono'] ?? '');
 $correo = trim($_POST['correo'] ?? '');
 $mensaje = trim($_POST['descripcion'] ?? '');
