@@ -45,6 +45,7 @@ $resultado = $conexion->query($sql);
   <table class="table table-bordered table-hover align-middle">
     <thead class="table-light">
       <tr>
+        <th>ID</th>
         <th>Nombre</th>
         <th>Marca</th>
         <th>Descripción</th>
@@ -58,6 +59,7 @@ $resultado = $conexion->query($sql);
     <tbody>
       <?php while ($auto = $resultado->fetch_assoc()): ?>
       <tr>
+        <td><?= $auto['idAuto'] ?></td>
         <td><?= htmlspecialchars($auto['Nombre']) ?></td>
         <td><?= htmlspecialchars($auto['nombreMarca'] ?? 'Sin marca') ?></td>
         <td><?= htmlspecialchars($auto['Descripcion']) ?></td>

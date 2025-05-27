@@ -43,6 +43,7 @@ $resultado = $conn->query($sql);
   <table class="table table-bordered table-hover align-middle">
     <thead class="table-light">
       <tr>
+        <th>ID</th>
         <th>Usuario</th>
         <th>Asunto</th>
         <th>Teléfono</th>
@@ -55,6 +56,7 @@ $resultado = $conn->query($sql);
       <?php if ($resultado && $resultado->num_rows > 0): ?>
         <?php while ($duda = $resultado->fetch_assoc()): ?>
         <tr>
+          <td><?= htmlspecialchars($duda['idDuda']) ?></td>
           <td><?= htmlspecialchars($duda['nombreUsuario'] ?? 'Invitado') ?></td>
           <td><?= htmlspecialchars($duda['Nombre']) ?></td>
           <td><?= htmlspecialchars($duda['Telefono']) ?></td>

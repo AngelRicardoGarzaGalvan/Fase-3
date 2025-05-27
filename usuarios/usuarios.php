@@ -21,6 +21,7 @@ $resultado = $conexion->query($consulta);
   <table class="table table-bordered">
     <thead>
       <tr>
+        <th>ID</th>
         <th>Nombre</th>
         <th>Correo</th>
         <th>Teléfono</th>
@@ -32,6 +33,7 @@ $resultado = $conexion->query($consulta);
     <tbody>
       <?php while($fila = $resultado->fetch_assoc()): ?>
         <tr>
+          <td><?= $fila['idUsuario']?></td>
           <td><?= $fila['Nombre'] ?></td>
           <td><?= $fila['Correo'] ?></td>
           <td><?= $fila['Telefono'] ?></td>
