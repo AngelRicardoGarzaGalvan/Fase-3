@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Iniciar Sesión - ABJA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="iniciar_sesion.css" />
+  <link rel="stylesheet" href="iniciar.css" />
 </head>
 <body>
   <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-center min-vh-100">
