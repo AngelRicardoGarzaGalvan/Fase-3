@@ -56,8 +56,24 @@ img {
 }
 
 /* Botón contáctanos */
-.btn-outline-primary {
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+.modern-btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background: linear-gradient(135deg, #1f1f1f, #333);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.modern-btn:hover {
+  background: linear-gradient(135deg, #968f8c, #968f8c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .btn-outline-primary:hover {
