@@ -16,6 +16,22 @@ $resultado = $conexion->query($consulta);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="../admin.html">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto"></ul>
+      <div class="d-flex align-items-center">
+        <i class="bi bi-person-circle fs-4 me-2"></i>
+        <span>Administrador</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
 <div class="container mt-5">
   <h2 class="mb-4">Gestión de Usuarios</h2>
   <table class="table table-bordered">
