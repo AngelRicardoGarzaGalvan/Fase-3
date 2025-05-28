@@ -11,7 +11,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-light shadow-sm px-4">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="..//index.html">Inicio</a>
+      <a class="navbar-brand fw-bold" href="../index.html">Inicio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,9 +37,29 @@
 
   <div class="container mt-5">
     <h1 class="mb-4 text-center">Catálogo de Autos</h1>
+
+    <!-- Formulario de filtro por marca -->
+    <form method="GET" class="mb-4 text-center">
+      <label for="marca">Filtrar por marca:</label>
+      <select name="marca" id="marca" class="form-select d-inline-block w-auto">
+        <option value="">Todas</option>
+        <?php
+        $marcas = $conexion->query("SELECT idMarca, Nombre FROM marcas");
+        while ($marca = $marcas->fetch_assoc()) {
+            echo "<option value='{$marca['idMarca']}' " . (isset($_GET['marca']) && $_GET['marca'] == $marca['idMarca'] ? 'selected' : '') . ">{$marca['Nombre']}</option>";
+        }
+        ?>
+      </select>
+      <button type="submit" class="btn btn-primary">Filtrar</button>
+    </form>
+
     <div class="row g-4">
       <?php
+      $marcaSeleccionada = isset($_GET['marca']) ? $_GET['marca'] : '';
       $consulta = "SELECT autos.*, marcas.Nombre AS nombreMarca FROM autos JOIN marcas ON autos.idMarca = marcas.idMarca";
+      if ($marcaSeleccionada) {
+          $consulta .= " WHERE autos.idMarca = " . intval($marcaSeleccionada);
+      }
       $resultado = $conexion->query($consulta);
 
       while($auto = $resultado->fetch_assoc()):
