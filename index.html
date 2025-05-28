@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Página Principal - ABJA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap"
+    rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <div class="dropdown user-dropdown">
-    <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown"
+      aria-expanded="false">
       <img src="./img/usuario.jpg" alt="Usuario" class="rounded-circle me-2" style="width: 40px; height: 40px;">
       <span>Usuario</span>
     </button>
@@ -72,21 +76,22 @@
   <h2>Nuestras principales marcas</h2>
   <!--Cuadros de logos -->
   <div class="car-container">
-   <div class="car-box" onclick="toggleInfo('infoToyota')">
-    <img src="img/toyota-logo.jpg" alt="Toyota">
-  </div>
-  
+    <div class="car-box" onclick="toggleInfo('infoToyota')">
+      <img src="img/toyota-logo.jpg" alt="Toyota">
+    </div>
+
     <div class="car-info" id="infoToyota">
       <h3>Toyota</h3>
       <p>Toyota fue fundada en 1937 en Japón y se ha convertido en una de las marcas automotrices más innovadoras. </p>
+      <a href="./catalogo/catalogo.php" class="btn-catalogo">Ver Catálogo</a>
     </div>
-
     <div class="car-box" onclick="toggleInfo('infoFord')">
       <img src="img/ford-logo.jpg" alt="Ford">
     </div>
     <div class="car-info" id="infoFord">
       <h3>Ford</h3>
       <p>Fundada en 1903 por Henry Ford, esta marca revolucionó la industria con la producción en cadena.</p>
+      <a href="./catalogo/catalogo.php" class="btn-catalogo">Ver Catálogo</a>
     </div>
 
     <div class="car-box" onclick="toggleInfo('infoChevrolet')">
@@ -95,6 +100,7 @@
     <div class="car-info" id="infoChevrolet">
       <h3>Chevrolet</h3>
       <p>Chevrolet, fundada en 1911, es reconocida por su innovación en vehículos accesibles y de alto rendimiento.</p>
+      <a href="./catalogo/catalogo.php" class="btn-catalogo">Ver Catálogo</a>
     </div>
   </div>
   <div class="car-container">
@@ -105,6 +111,7 @@
       <h3>Mercedes-Benz</h3>
       <p>Mercedes-Benz es sinónimo de lujo y tecnología avanzada, con raíces en la creación del primer automóvil en
         1886.</p>
+        <a href="./catalogo/catalogo.php" class="btn-catalogo">Ver Catálogo</a>
     </div>
 
     <div class="car-box" onclick="toggleInfo('infoNissan')">
@@ -113,6 +120,7 @@
     <div class="car-info" id="infoNissan">
       <h3>Nissan</h3>
       <p>Nissan ha sido pionera en movilidad eléctrica y diseño innovador desde su fundación en 1933 en Japón.</p>
+      <a href="./catalogo/catalogo.php" class="btn-catalogo">Ver Catálogo</a>
     </div>
 
     <div class="car-box" onclick="toggleInfo('infoAudi')">
@@ -122,73 +130,75 @@
       <h3>Audi</h3>
       <p>Audi es famosa por su lema "Vorsprung durch Technik" (Avance a través de la tecnología) y su legado en autos de
         alto desempeño.</p>
+        <a href="./catalogo/catalogo.php" class="btn-catalogo">Ver Catálogo</a>
     </div>
 
   </div>
   <!-- Testimonios -->
-<div class="container my-5">
-  <h2 class="text-center mb-4">Testimonios de nuestros clientes</h2>
-  <div class="row">
-    <div class="col-md-4 mb-3">
-      <div class="card p-3">
-        <p>"Excelente atención, compré mi primer auto con ellos y estoy feliz con la elección."</p>
-        <p class="fw-bold mb-0">– Mariana López</p>
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <div class="card p-3">
-        <p>"Gran variedad de modelos y los asesores muy profesionales. Recomiendo totalmente."</p>
-        <p class="fw-bold mb-0">– José Ramírez</p>
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <div class="card p-3">
-        <p>"Pude comparar diferentes planes de pago y elegí el más conveniente para mí."</p>
-        <p class="fw-bold mb-0">– Laura Méndez</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer class="bg-dark text-white pt-4 mt-5">
-  <div class="container">
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Testimonios de nuestros clientes</h2>
     <div class="row">
-
-      <!-- Logo e información -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold">ABJA Autos</h5>
-        <p>Tu agencia de confianza para encontrar el auto ideal. Calidad, seguridad y estilo a tu alcance.</p>
+      <div class="col-md-4 mb-3">
+        <div class="card p-3">
+          <p>"Excelente atención, compré mi primer auto con ellos y estoy feliz con la elección."</p>
+          <p class="fw-bold mb-0">– Mariana López</p>
+        </div>
       </div>
-
-      <!-- Enlaces rápidos -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold">Navegación</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
-          <li><a href="acerca/acerca.html" class="text-white text-decoration-none">Acerca de</a></li>
-          <li><a href="acerca/contactanos.html" class="text-white text-decoration-none">Contacto</a></li>
-        </ul>
+      <div class="col-md-4 mb-3">
+        <div class="card p-3">
+          <p>"Gran variedad de modelos y los asesores muy profesionales. Recomiendo totalmente."</p>
+          <p class="fw-bold mb-0">– José Ramírez</p>
+        </div>
       </div>
-
-      <!-- Contacto -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold">Contacto</h5>
-        <p><i class="bi bi-telephone-fill"></i> +91 98765 43210</p>
-        <p><i class="bi bi-envelope-fill"></i> abja@gmail.com</p>
-        <p><i class="bi bi-geo-alt-fill"></i> Monterrey, Nuevo León</p>
+      <div class="col-md-4 mb-3">
+        <div class="card p-3">
+          <p>"Pude comparar diferentes planes de pago y elegí el más conveniente para mí."</p>
+          <p class="fw-bold mb-0">– Laura Méndez</p>
+        </div>
       </div>
-
-    </div>
-
-    <!-- Línea inferior -->
-    <div class="text-center border-top pt-3 mt-3">
-      <p class="mb-0">&copy; 2025 ABJA Autos. Todos los derechos reservados.</p>
     </div>
   </div>
-</footer>
+
+  <footer class="bg-dark text-white pt-4 mt-5">
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo e información -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">ABJA Autos</h5>
+          <p>Tu agencia de confianza para encontrar el auto ideal. Calidad, seguridad y estilo a tu alcance.</p>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">Navegación</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="acerca/acerca.html" class="text-white text-decoration-none">Acerca de</a></li>
+            <li><a href="acerca/contactanos.html" class="text-white text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">Contacto</h5>
+          <p><i class="bi bi-telephone-fill"></i> +91 98765 43210</p>
+          <p><i class="bi bi-envelope-fill"></i> abja@gmail.com</p>
+          <p><i class="bi bi-geo-alt-fill"></i> Monterrey, Nuevo León</p>
+        </div>
+
+      </div>
+
+      <!-- Línea inferior -->
+      <div class="text-center border-top pt-3 mt-3">
+        <p class="mb-0">&copy; 2025 ABJA Autos. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="index.js"></script>
 </body>
+
 </html>
